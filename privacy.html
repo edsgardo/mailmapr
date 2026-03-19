@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailMapr - Privacy Policy</title>
+    <meta name="description" content="MailMapr Privacy Policy. No data collection, no tracking, no cloud. 100% offline email forensic analysis on macOS.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.7;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #30363d;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .nav-brand { color: #58a6ff; font-weight: 700; font-size: 16px; text-decoration: none; }
+        .nav-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #e6edf3; }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #58a6ff, #3fb950);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: #8b949e; font-size: 14px; margin-bottom: 32px; }
+        h2 { font-size: 18px; margin: 28px 0 12px; color: #e6edf3; }
+        p, li { font-size: 14px; color: #c9d1d9; margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 12px; }
+        li { margin-bottom: 6px; }
+        .highlight {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .highlight p { margin-bottom: 0; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { margin-top: 40px; padding-top: 20px; border-top: 1px solid #30363d; }
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #6e7681;
+            font-size: 12px;
+            margin-top: 40px;
+            border-top: 1px solid #30363d;
+        }
+        .footer a { color: #6e7681; margin: 0 10px; }
+        .footer a:hover { color: #8b949e; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="nav-brand">MailMapr</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="eula.html">Terms</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Last updated: March 19, 2026</p>
+
+        <div class="highlight">
+            <p><strong>MailMapr does not collect, transmit, or share any personal data.</strong> All email analysis is performed entirely on your Mac. No data ever leaves your device.</p>
+        </div>
+
+        <h2>1. Data Collection</h2>
+        <p>MailMapr does <strong>not</strong> collect any personal information. Specifically:</p>
+        <ul>
+            <li>No user accounts or registration required</li>
+            <li>No analytics or telemetry data collected</li>
+            <li>No usage tracking or behavioral profiling</li>
+            <li>No crash reports sent to external servers</li>
+            <li>No advertising identifiers used</li>
+            <li>No cookies or web tracking</li>
+        </ul>
+
+        <h2>2. Email Data Processing</h2>
+        <p>MailMapr processes email files (EML, EMLX, MSG, MBOX) that you explicitly import into the application. This processing:</p>
+        <ul>
+            <li>Occurs <strong>entirely on your local device</strong></li>
+            <li>Is stored only in the application's sandboxed container on your Mac</li>
+            <li>Is never transmitted to any external server or cloud service</li>
+            <li>Can be deleted at any time by removing projects within the app</li>
+        </ul>
+
+        <h2>3. Network Usage</h2>
+        <p>MailMapr includes a network entitlement solely to support report generation features (HTML rendering). The application:</p>
+        <ul>
+            <li>Does <strong>not</strong> make any outbound network requests to external servers</li>
+            <li>Does <strong>not</strong> phone home or check for updates externally</li>
+            <li>Does <strong>not</strong> transmit any user data over the network</li>
+        </ul>
+
+        <h2>4. Data Storage</h2>
+        <p>All application data is stored locally within the macOS Application Support directory, protected by the App Sandbox. This includes:</p>
+        <ul>
+            <li>Imported email artifacts and their analysis results</li>
+            <li>Project configurations and trust lists</li>
+            <li>Generated forensic reports</li>
+            <li>Application preferences</li>
+        </ul>
+        <p>You have full control over this data and can delete it at any time through the app or by removing the application container.</p>
+
+        <h2>5. System Permissions</h2>
+        <p>MailMapr requests access to the following system resources, all within the macOS App Sandbox:</p>
+        <ul>
+            <li><strong>Documents, Downloads &amp; Desktop folders</strong> &mdash; For importing email files and exporting forensic reports. Access is granted only through user-initiated file dialogs or drag-and-drop.</li>
+            <li><strong>User-selected files (read/write)</strong> &mdash; To open email files you choose and save exported reports.</li>
+            <li><strong>Print</strong> &mdash; To print email content and reports.</li>
+        </ul>
+        <p>MailMapr does not access any files without your explicit action.</p>
+
+        <h2>6. Required Reason APIs</h2>
+        <p>In compliance with Apple's App Store requirements, MailMapr declares the following Required Reason API usage:</p>
+        <ul>
+            <li><strong>File timestamp APIs</strong> &mdash; Used to display email file dates in the forensic analysis timeline. No data is sent externally.</li>
+            <li><strong>UserDefaults</strong> &mdash; Used to store your application preferences (language, appearance, settings). Data remains on-device.</li>
+        </ul>
+
+        <h2>7. Third-Party Services</h2>
+        <p>MailMapr does <strong>not</strong> integrate with any third-party services, SDKs, or analytics platforms. There are no external dependencies that process user data.</p>
+        <p>MailMapr uses two open-source libraries (ZIPFoundation and OLEKit) for file parsing only. These libraries operate entirely offline and do not transmit any data.</p>
+
+        <h2>8. GDPR &amp; CCPA Compliance</h2>
+        <p>Because MailMapr does not collect, store, or transmit any personal data to external servers, the data protection obligations under GDPR (General Data Protection Regulation) and CCPA (California Consumer Privacy Act) are inherently satisfied:</p>
+        <ul>
+            <li>No personal data is collected or processed by us</li>
+            <li>No data is shared with third parties</li>
+            <li>No cross-border data transfers occur</li>
+            <li>All data remains exclusively under your control on your local device</li>
+        </ul>
+
+        <h2>9. Children's Privacy</h2>
+        <p>MailMapr is a professional forensic analysis tool designed for cybersecurity professionals, legal teams, and IT administrators. It does not target, market to, or knowingly collect information from children under 13 (or under 16 in the EU).</p>
+
+        <h2>10. Data Retention &amp; Deletion</h2>
+        <p>Since all data is stored locally on your Mac:</p>
+        <ul>
+            <li>You can delete individual projects and their data from within the app at any time</li>
+            <li>Uninstalling MailMapr removes the application and its sandboxed container</li>
+            <li>No residual data is retained on any external server, as none is ever transmitted</li>
+        </ul>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>If we update this privacy policy, the changes will be posted on this page with an updated revision date. Continued use of MailMapr after changes constitutes acceptance of the revised policy.</p>
+
+        <h2>12. Contact</h2>
+        <p>If you have questions about this privacy policy, please contact us at:</p>
+        <p><a href="mailto:support@mailmapr.com">support@mailmapr.com</a></p>
+
+        <div class="back">
+            <a href="index.html">&larr; Back to MailMapr</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 MailMapr. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="privacy.html">Privacy</a>
+                <a href="eula.html">Terms</a>
+                <a href="support.html">Support</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

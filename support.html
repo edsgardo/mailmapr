@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailMapr - Support</title>
+    <meta name="description" content="Get help with MailMapr. FAQ, getting started guide, system requirements, and contact support.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.7;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #30363d;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .nav-brand { color: #58a6ff; font-weight: 700; font-size: 16px; text-decoration: none; }
+        .nav-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #e6edf3; }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #58a6ff, #3fb950);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { color: #8b949e; font-size: 14px; margin-bottom: 32px; }
+        h2 { font-size: 18px; margin: 32px 0 14px; color: #e6edf3; }
+        h3 { font-size: 15px; margin: 20px 0 8px; color: #c9d1d9; }
+        p, li { font-size: 14px; color: #c9d1d9; margin-bottom: 12px; }
+        ul, ol { padding-left: 24px; margin-bottom: 12px; }
+        li { margin-bottom: 6px; }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-box {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .contact-box a {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .faq {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            transition: border-color 0.2s;
+        }
+        .faq:hover { border-color: #58a6ff33; }
+        .faq h3 { margin: 0 0 8px; color: #58a6ff; font-size: 14px; }
+        .faq p { margin-bottom: 0; font-size: 13px; }
+        code {
+            background: #1f2937;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'SF Mono', monospace;
+            font-size: 12px;
+            color: #e6edf3;
+        }
+
+        /* Getting started steps */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        .steps li {
+            counter-increment: step;
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 16px;
+        }
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            background: #1f6feb22;
+            color: #58a6ff;
+            border: 1px solid #1f6feb44;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        /* Quick tips */
+        .tip {
+            background: #161b22;
+            border-left: 3px solid #3fb950;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+        }
+        .tip strong { color: #3fb950; }
+        .tip p { margin-bottom: 0; font-size: 13px; }
+
+        /* Troubleshooting */
+        .trouble {
+            background: #161b22;
+            border-left: 3px solid #d29922;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 12px 0;
+        }
+        .trouble h4 { font-size: 13px; color: #d29922; margin-bottom: 6px; }
+        .trouble p { margin-bottom: 0; font-size: 13px; }
+
+        .back { margin-top: 40px; padding-top: 20px; border-top: 1px solid #30363d; }
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #6e7681;
+            font-size: 12px;
+            margin-top: 40px;
+            border-top: 1px solid #30363d;
+        }
+        .footer a { color: #6e7681; margin: 0 10px; text-decoration: none; }
+        .footer a:hover { color: #8b949e; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="nav-brand">MailMapr</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="eula.html">Terms</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Support</h1>
+        <p class="subtitle">Get help with MailMapr</p>
+
+        <div class="contact-box">
+            <p style="color: #8b949e; margin-bottom: 8px;">Need help? Contact us at</p>
+            <a href="mailto:support@mailmapr.com">support@mailmapr.com</a>
+        </div>
+
+        <h2>Getting Started</h2>
+        <ol class="steps">
+            <li><strong>Create a Project</strong> &mdash; Open MailMapr and create a new project to organize your investigation.</li>
+            <li><strong>Import Evidence</strong> &mdash; Drag and drop EML, MSG, EMLX, or MBOX files into the Ingest module.</li>
+            <li><strong>Analyze</strong> &mdash; Use the Dashboard, Timeline, and Correlation modules to investigate email patterns.</li>
+            <li><strong>Classify Contacts</strong> &mdash; Use the Trusted module to mark emails, domains, and IPs as whitelisted, suspicious, or blacklisted.</li>
+            <li><strong>Generate Reports</strong> &mdash; Create Technical Forensic or Executive Summary reports from the Reports module.</li>
+        </ol>
+
+        <div class="tip">
+            <p><strong>Quick View mode:</strong> You can open and inspect individual email files directly from Finder without creating a project. Just double-click an EML/MSG file or use File &gt; Open.</p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+            <h3>What file formats does MailMapr support?</h3>
+            <p>MailMapr supports <code>.eml</code>, <code>.emlx</code> (Apple Mail), <code>.msg</code> (Microsoft Outlook), and <code>.mbox</code> (mailbox archive) files. You can export analysis results as PDF or HTML reports.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Where is my data stored?</h3>
+            <p>All data is stored locally on your Mac in the Application Support directory, protected by the macOS App Sandbox. No data is sent to external servers. You can delete projects and their data at any time from within the app.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Can I analyze emails from different email clients?</h3>
+            <p>Yes. MailMapr works with standard email formats exported from any email client including Outlook, Thunderbird, Apple Mail, Gmail (via Google Takeout), and others.</p>
+        </div>
+
+        <div class="faq">
+            <h3>What are Trust Lists?</h3>
+            <p>Trust Lists classify email addresses, domains, and IPs into three categories: <span style="color:#3fb950;">Whitelist</span> (trusted, green), <span style="color:#d29922;">Suspicious</span> (under investigation, orange), and <span style="color:#f85149;">Blacklist</span> (confirmed threat, red). Lists can be applied globally across all projects or per individual project.</p>
+        </div>
+
+        <div class="faq">
+            <h3>What are Indicators of Compromise (IoC)?</h3>
+            <p>IoCs are forensic artifacts that indicate a potential security breach: malicious email addresses, suspicious domains, or flagged IP addresses found during analysis. MailMapr lets you track, annotate, and export them.</p>
+        </div>
+
+        <div class="faq">
+            <h3>How do I export reports?</h3>
+            <p>Go to the Reports module, select the report type (Technical Forensic or Executive Summary), choose your emails, and click Generate Report. Reports can be exported as HTML or PDF.</p>
+        </div>
+
+        <div class="faq">
+            <h3>What does the phishing risk score mean?</h3>
+            <p>Each email receives an automatic risk score from 0 (safe) to 100 (high risk). The score is based on header analysis, authentication checks (SPF, DKIM, DMARC), domain mismatches, suspicious patterns, and other forensic indicators.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Is MailMapr available in other languages?</h3>
+            <p>Yes. MailMapr supports English and Spanish. You can change the language in Settings.</p>
+        </div>
+
+        <h2>Troubleshooting</h2>
+
+        <div class="trouble">
+            <h4>Email file won't open</h4>
+            <p>Ensure the file has a supported extension (.eml, .emlx, .msg, .mbox). If the file is corrupted or uses a non-standard encoding, MailMapr will display a parsing error with details.</p>
+        </div>
+
+        <div class="trouble">
+            <h4>MSG file shows partial content</h4>
+            <p>Some MSG files use non-standard OLE structures. MailMapr parses the standard Outlook format. If a file was exported from a third-party tool, try re-exporting it directly from Outlook.</p>
+        </div>
+
+        <div class="trouble">
+            <h4>Trust colors not updating</h4>
+            <p>After modifying trust lists, the changes apply immediately to the current view. If colors don't update, try switching to another email and back, or reopen the project.</p>
+        </div>
+
+        <h2>System Requirements</h2>
+        <ul>
+            <li>macOS 14.0 (Sonoma) or later</li>
+            <li>Apple Silicon or Intel Mac</li>
+            <li>Minimum 4 GB RAM recommended</li>
+            <li>Storage space varies by evidence volume</li>
+        </ul>
+
+        <div class="back">
+            <a href="index.html">&larr; Back to MailMapr</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 MailMapr. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="privacy.html">Privacy</a>
+                <a href="eula.html">Terms</a>
+                <a href="support.html">Support</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
