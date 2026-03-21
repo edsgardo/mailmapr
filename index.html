@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailMapr - Forensic Email Analysis & Viewer for macOS</title>
+    <meta name="description" content="MailMapr is a powerful email viewer and forensic analysis tool for macOS. Open EML, MSG, MBOX files. Detect phishing, analyze headers, generate reports. Available on the Mac App Store.">
+    <meta name="keywords" content="email forensics, phishing detection, EML viewer, MSG viewer, MBOX, macOS, email analysis, cybersecurity, indicators of compromise, IoC, forensic report, email headers, SPF, DKIM, DMARC">
+    <meta property="og:title" content="MailMapr - Forensic Email Analysis for macOS">
+    <meta property="og:description" content="Open, analyze, and investigate email files. Detect phishing, track IoCs, generate forensic reports. 100% offline. Available on the Mac App Store.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mailmapr.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MailMapr - Forensic Email Analysis for macOS">
+    <meta name="twitter:description" content="Open, analyze, and investigate email files. Detect phishing, track IoCs, generate forensic reports. 100% offline.">
+    <link rel="canonical" href="https://mailmapr.com">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            border-bottom: 1px solid #30363d;
+            position: sticky;
+            top: 0;
+            background: #0d1117ee;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+        .nav-brand { color: #58a6ff; font-weight: 700; font-size: 18px; text-decoration: none; }
+        .nav-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 24px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #e6edf3; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+            border-bottom: 1px solid #30363d;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, #1f6feb08 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .hero > * { position: relative; z-index: 1; }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #58a6ff, #3fb950);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .hero p { font-size: 18px; color: #8b949e; margin-bottom: 8px; animation: fadeInUp 0.6s ease-out 0.1s both; }
+        .hero .tagline { font-size: 14px; color: #6e7681; font-family: 'SF Mono', monospace; animation: fadeInUp 0.6s ease-out 0.2s both; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge-row { animation: fadeInUp 0.6s ease-out 0.3s both; }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 20px 4px 0;
+        }
+        .badge-blue { background: #1f6feb22; color: #58a6ff; border: 1px solid #1f6feb44; }
+        .badge-green { background: #23863622; color: #3fb950; border: 1px solid #23863644; }
+        .badge-orange { background: #d2992222; color: #d29922; border: 1px solid #d2992244; }
+        .badge-purple { background: #8957e522; color: #bc8cff; border: 1px solid #8957e544; }
+
+        /* App Store CTA */
+        .cta {
+            margin-top: 30px;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #238636, #2ea043);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #2ea04366;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px #2ea04340;
+            text-decoration: none;
+        }
+        .cta-button svg { width: 20px; height: 20px; fill: currentColor; }
+        .cta-sub { font-size: 12px; color: #6e7681; margin-top: 10px; }
+
+        /* Use Cases */
+        .use-cases {
+            padding: 60px 20px 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .use-cases h2 { font-size: 26px; margin-bottom: 8px; color: #e6edf3; }
+        .use-cases .sub { font-size: 14px; color: #6e7681; margin-bottom: 30px; }
+        .personas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+        .persona {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 22px 16px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .persona:hover { transform: translateY(-3px); border-color: #58a6ff44; }
+        .persona .icon { font-size: 28px; margin-bottom: 10px; }
+        .persona h3 { font-size: 13px; margin-bottom: 6px; color: #e6edf3; }
+        .persona p { font-size: 11px; color: #8b949e; }
+
+        /* Section titles */
+        .section-title {
+            text-align: center;
+            padding: 50px 20px 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section-title h2 { font-size: 22px; color: #e6edf3; margin-bottom: 6px; }
+        .section-title p { font-size: 13px; color: #6e7681; }
+
+        /* Features grid */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            padding: 20px 20px 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .feature {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 18px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .feature:hover { transform: translateY(-2px); border-color: #30363d88; }
+        .feature .feat-icon { font-size: 20px; margin-bottom: 8px; }
+        .feature h3 { font-size: 14px; margin-bottom: 6px; color: #e6edf3; }
+        .feature p { font-size: 12px; color: #8b949e; }
+
+        /* Full-width feature */
+        .feature-full {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 14px auto 0;
+        }
+        .feature-full h3 { font-size: 14px; margin-bottom: 6px; color: #e6edf3; }
+        .feature-full p { font-size: 12px; color: #8b949e; }
+        .format-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .format-tag {
+            background: #1f2937;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 11px;
+            font-family: 'SF Mono', monospace;
+            color: #58a6ff;
+            border: 1px solid #30363d;
+        }
+
+        /* Highlights / Stats */
+        .highlights {
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding: 0 20px;
+        }
+        .highlight-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 14px;
+        }
+        .stat {
+            text-align: center;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px 10px;
+            transition: transform 0.2s;
+        }
+        .stat:hover { transform: translateY(-2px); }
+        .stat .num { font-size: 22px; font-weight: 700; color: #58a6ff; }
+        .stat .label { font-size: 10px; color: #8b949e; margin-top: 4px; }
+
+        /* Footer */
+        .links {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #30363d;
+            margin-top: 50px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 8px 16px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .links a:hover { color: #79c0ff; text-decoration: underline; }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6e7681;
+            font-size: 12px;
+            border-top: 1px solid #30363d;
+        }
+        .footer a { color: #6e7681; margin: 0 10px; text-decoration: none; }
+        .footer a:hover { color: #8b949e; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .nav { padding: 12px 16px; }
+            .nav-links a { margin-left: 14px; font-size: 12px; }
+            .features, .personas { grid-template-columns: 1fr; }
+            .feature-full > div[style] { grid-template-columns: 1fr !important; }
+            .highlight-row { grid-template-columns: 1fr 1fr; }
+            .hero h1 { font-size: 34px; }
+            .hero { padding: 60px 16px 40px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" class="nav-brand">MailMapr</a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="eula.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>MailMapr</h1>
+        <p>Email Viewer &amp; Forensic Analysis for macOS</p>
+        <p class="tagline">Open. Analyze. Investigate. Report.</p>
+        <div class="badge-row">
+            <span class="badge badge-blue">macOS 14+</span>
+            <span class="badge badge-green">App Store</span>
+            <span class="badge badge-orange">English &amp; Spanish</span>
+            <span class="badge badge-purple">100% Offline</span>
+        </div>
+        <div class="cta">
+            <a href="https://apps.apple.com/app/mailmapr/id6760811510" class="cta-button" id="appstore-link">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Download on the Mac App Store
+            </a>
+            <p class="cta-sub">Requires macOS 14.0 Sonoma or later</p>
+        </div>
+    </div>
+
+    <!-- Who is it for -->
+    <div class="use-cases">
+        <h2>Built for professionals who handle email evidence</h2>
+        <p class="sub">Whether you're investigating phishing, auditing communications, or simply need to open email files</p>
+        <div class="personas">
+            <div class="persona">
+                <div class="icon">&#128373;</div>
+                <h3>Cybersecurity Analysts</h3>
+                <p>Investigate phishing attacks, detect spoofing, identify IoCs and compromised accounts.</p>
+            </div>
+            <div class="persona">
+                <div class="icon">&#9878;</div>
+                <h3>Legal &amp; Compliance</h3>
+                <p>Review email evidence with chain-of-custody. Export forensic reports for legal proceedings.</p>
+            </div>
+            <div class="persona">
+                <div class="icon">&#128187;</div>
+                <h3>IT Administrators</h3>
+                <p>Open and view EML/MSG files. Convert between formats. Analyze suspicious emails from users.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Viewer & Converter -->
+    <div class="section-title">
+        <h2>Powerful Email Viewer &amp; Converter</h2>
+        <p>No Outlook or email client needed &mdash; open any email file directly</p>
+    </div>
+
+    <div class="feature-full" style="margin-left: auto; margin-right: auto; padding: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <h3>&#128441; View Any Email File</h3>
+                <p>Open EML, EMLX, MSG (Outlook), and MBOX archives without any email client installed. View full message body, headers, attachments, and metadata.</p>
+                <p style="margin-top: 8px;"><strong style="color:#3fb950;">Quick View mode</strong> &mdash; open and inspect email files without creating a project.</p>
+            </div>
+            <div>
+                <h3>&#128260; Export &amp; Convert</h3>
+                <p>Export email evidence to PDF for sharing with teams, legal departments, or management. Generate professional forensic reports in HTML and PDF formats.</p>
+                <p style="margin-top: 8px;"><strong style="color:#3fb950;">Batch analysis</strong> &mdash; import multiple files at once via drag &amp; drop.</p>
+            </div>
+        </div>
+        <div class="format-list">
+            <span class="format-tag">.eml</span>
+            <span class="format-tag">.emlx</span>
+            <span class="format-tag">.msg</span>
+            <span class="format-tag">.mbox</span>
+            <span class="format-tag" style="color: #3fb950;">&rarr; PDF</span>
+            <span class="format-tag" style="color: #3fb950;">&rarr; HTML</span>
+        </div>
+    </div>
+
+    <!-- Forensic Features -->
+    <div class="section-title" id="features" style="padding-top: 60px;">
+        <h2>Deep Forensic Analysis</h2>
+        <p>Everything you need to investigate email-based threats</p>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <div class="feat-icon">&#128270;</div>
+            <h3>Phishing Detection</h3>
+            <p>Automatic risk scoring (0&ndash;100) per email. Detect header spoofing, domain mismatches, authentication failures (SPF, DKIM, DMARC), and suspicious patterns.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#127912;</div>
+            <h3>Trust Color Coding</h3>
+            <p>Emails, domains, and IPs color-coded by trust: <span style="color:#3fb950;">green</span> (whitelist), <span style="color:#d29922;">orange</span> (suspicious), <span style="color:#f85149;">red</span> (blacklist). Instant visual threat assessment.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#128200;</div>
+            <h3>Timeline Analysis</h3>
+            <p>Visualize email communication patterns over time. Identify anomalies, timeline gaps, and correlate events across an incident.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#127760;</div>
+            <h3>Network Graph</h3>
+            <p>Map communication relationships between all addresses. Detect communities, identify attack hubs and entry vectors visually.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#9888;</div>
+            <h3>Indicators of Compromise</h3>
+            <p>Track malicious emails, domains, and IPs as IoCs. Record threat level, source, and occurrences. Export for threat intelligence sharing.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#128196;</div>
+            <h3>Professional Reports</h3>
+            <p>Generate Technical Forensic and Executive Summary reports. Full email analysis, risk breakdown, trust distribution, and per-incident details.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#128101;</div>
+            <h3>Cross-Incident Correlation</h3>
+            <p>Identify recurring contacts across multiple investigations. Detect coordinated attacks spanning different cases and timeframes.</p>
+        </div>
+        <div class="feature">
+            <div class="feat-icon">&#128274;</div>
+            <h3>Privacy First</h3>
+            <p>100% offline analysis. No data leaves your Mac. No cloud, no accounts, no tracking. App Sandbox protected. Your evidence stays yours.</p>
+        </div>
+    </div>
+
+    <!-- Key Numbers -->
+    <div class="highlights">
+        <div class="highlight-row">
+            <div class="stat">
+                <div class="num">4</div>
+                <div class="label">Email formats supported</div>
+            </div>
+            <div class="stat">
+                <div class="num">3</div>
+                <div class="label">Report types</div>
+            </div>
+            <div class="stat">
+                <div class="num">2</div>
+                <div class="label">Languages</div>
+            </div>
+            <div class="stat">
+                <div class="num">0</div>
+                <div class="label">Data sent to cloud</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="eula.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@mailmapr.com">Contact</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 MailMapr. All rights reserved.</p>
+        <p style="margin-top: 6px;">Available on the Mac App Store.</p>
+        <p style="margin-top: 8px;">
+            <a href="privacy.html">Privacy</a>
+            <a href="eula.html">Terms</a>
+            <a href="support.html">Support</a>
+        </p>
+    </div>
+</body>
+</html>
