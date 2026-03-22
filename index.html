@@ -264,11 +264,97 @@
         .footer a { color: #6e7681; margin: 0 10px; text-decoration: none; }
         .footer a:hover { color: #8b949e; }
 
+        /* Screenshots Gallery */
+        .gallery {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 20px 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .gallery-item {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .gallery-item:hover { transform: translateY(-3px); border-color: #58a6ff; }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item .caption {
+            padding: 10px 14px;
+            font-size: 12px;
+            color: #8b949e;
+        }
+        .gallery-item .caption strong { color: #e6edf3; font-size: 13px; display: block; margin-bottom: 2px; }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 92vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 20px 0;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .step {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 18px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .step:hover { transform: translateY(-2px); border-color: #30363d88; }
+        .step-num {
+            display: inline-block;
+            width: 26px; height: 26px;
+            background: #1f6feb;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 26px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .step h3 { font-size: 14px; margin-bottom: 6px; color: #e6edf3; }
+        .step p { font-size: 12px; color: #8b949e; }
+
         /* Responsive */
         @media (max-width: 600px) {
             .nav { padding: 12px 16px; }
             .nav-links a { margin-left: 14px; font-size: 12px; }
-            .features, .personas { grid-template-columns: 1fr; }
+            .features, .personas, .steps-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
             .feature-full > div[style] { grid-template-columns: 1fr !important; }
             .highlight-row { grid-template-columns: 1fr 1fr; }
             .hero h1 { font-size: 34px; }
@@ -429,6 +515,138 @@
         </div>
     </div>
 
+    <!-- Screenshots -->
+    <div class="section-title" style="padding-top: 60px;">
+        <h2>See It in Action</h2>
+        <p>Click any screenshot to enlarge</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/dashboard.png" alt="MailMapr Project Dashboard" loading="lazy">
+                <div class="caption">
+                    <strong>Project Dashboard</strong>
+                    Risk distribution, trust analysis, threat vectors, flagged senders, and IoC tracking at a glance.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/global-dashboard.png" alt="MailMapr Global Dashboard" loading="lazy">
+                <div class="caption">
+                    <strong>Global Dashboard</strong>
+                    Cross-project analysis with incident timeline, risk scores, and cross-incident contact correlation.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/correlation-email.png" alt="MailMapr Email Correlation Network" loading="lazy">
+                <div class="caption">
+                    <strong>Correlation &mdash; Email Network</strong>
+                    Interactive network graph mapping sender relationships. Color-coded by trust level with centrality metrics.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/correlation-threads.png" alt="MailMapr Thread Correlation" loading="lazy">
+                <div class="caption">
+                    <strong>Correlation &mdash; Threads</strong>
+                    Visualize email threads and their relationships. Inspect individual messages with full metadata.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/Timeline.png" alt="MailMapr Timeline Analysis" loading="lazy">
+                <div class="caption">
+                    <strong>Timeline Analysis</strong>
+                    Visualize email threads over time. Inspect individual messages with phishing tags, body preview, and full metadata.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/Message.png" alt="MailMapr Email Headers and Message View" loading="lazy">
+                <div class="caption">
+                    <strong>Message &amp; Headers</strong>
+                    Full header analysis with parsed fields, SPF/DKIM/DMARC results, IP addresses, and authentication details.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/IoC.png" alt="MailMapr Indicators of Compromise" loading="lazy">
+                <div class="caption">
+                    <strong>Indicators of Compromise</strong>
+                    Track and tag malicious emails, domains, and IPs. Add IoCs with threat level, notes, and associated evidence.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/Report.png" alt="MailMapr Forensic Reports" loading="lazy">
+                <div class="caption">
+                    <strong>Professional Reports</strong>
+                    Generate Technical Forensic and Executive Summary reports with email activity timeline and thread network visualizations.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/ingest.png" alt="MailMapr Ingest and Email Viewer" loading="lazy">
+                <div class="caption">
+                    <strong>Ingest &amp; Email Viewer</strong>
+                    Import emails via drag &amp; drop. View message body, headers, raw content, and metadata with phishing tags.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/import.png" alt="MailMapr Import Investigation Data" loading="lazy">
+                <div class="caption">
+                    <strong>Import Investigation Data</strong>
+                    Import trust lists, evidence tags, IoC index, and marks from another project with merge or replace options.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/export.png" alt="MailMapr Export Investigation Data" loading="lazy">
+                <div class="caption">
+                    <strong>Export Investigation Data</strong>
+                    Export trust lists, evidence tags, IoC index, and message marks for sharing or archiving.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="screenshots/Launcher.png" alt="MailMapr Home Screen" loading="lazy">
+                <div class="caption">
+                    <strong>Home &amp; Workspace</strong>
+                    Workspace overview with project list, incident timeline, Quick View for instant file inspection, and project creation.
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; font-size: 11px; color: #6e7681; margin-top: 16px; font-style: italic;">All email addresses, company names, and domains shown in screenshots are entirely fictitious and created for demonstration purposes using the IANA-reserved .test TLD.</p>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Screenshot enlarged">
+    </div>
+
+    <!-- How It Works -->
+    <div class="section-title" style="padding-top: 60px;">
+        <h2>How It Works</h2>
+        <p>From email import to forensic report in four steps</p>
+    </div>
+
+    <div class="how-it-works">
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Create a Project</h3>
+                <p>Organize your investigation by creating a project. Each project keeps evidence, analysis, and reports separate and self-contained.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Import Evidence</h3>
+                <p>Drag and drop EML, MSG, or MBOX files into the Ingest module. MailMapr parses headers, body, attachments, and metadata automatically. Use Quick View to inspect files without a project.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Analyze &amp; Investigate</h3>
+                <p>Review phishing risk scores, SPF/DKIM/DMARC results, and trust color coding. Use Timeline, Correlation graphs, and Indicators to map the full attack picture.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h3>Generate Reports</h3>
+                <p>Export Technical Forensic or Executive Summary reports as HTML or PDF. Share findings with management, legal teams, or incident responders.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="eula.html">Terms of Use</a>
@@ -445,5 +663,19 @@
             <a href="support.html">Support</a>
         </p>
     </div>
+
+    <script>
+        function openLightbox(el) {
+            var img = el.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </body>
 </html>
