@@ -71,106 +71,203 @@
     <div class="nav">
         <a href="index.html" class="nav-brand">MailMapr</a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="support.html">Support</a>
+            <a href="index.html" data-i18n="nav-home">Home</a>
+            <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
+            <a href="support.html" data-i18n="nav-support">Support</a>
+            <span class="lang-toggle" style="margin-left: 20px; cursor: pointer; user-select: none;">
+                <span id="lang-en" style="color: #58a6ff; font-weight: 700;" onclick="setLang('en')">EN</span>
+                <span style="color: #30363d; margin: 0 2px;">|</span>
+                <span id="lang-es" style="color: #6e7681;" onclick="setLang('es')">ES</span>
+            </span>
         </div>
     </div>
 
     <div class="container">
-        <h1>Terms of Use</h1>
-        <p class="subtitle">End-User License Agreement (EULA) &mdash; Last updated: March 19, 2026</p>
+        <h1 data-i18n="title">Terms of Use</h1>
+        <p class="subtitle" data-i18n="subtitle">End-User License Agreement (EULA) &mdash; Last updated: March 19, 2026</p>
 
         <div class="highlight">
-            <p>By downloading, installing, or using MailMapr, you agree to these terms. If you do not agree, do not use the application.</p>
+            <p data-i18n="highlight-disclaimer">By downloading, installing, or using MailMapr, you agree to these terms. If you do not agree, do not use the application.</p>
         </div>
 
-        <h2>1. License Grant</h2>
-        <p>MailMapr grants you a limited, non-exclusive, non-transferable, revocable license to use the application on any Apple-branded device that you own or control, subject to the Apple Media Services Terms and Conditions.</p>
-        <p>This license does not allow you to use MailMapr on any device you do not own or control, and you may not distribute or make MailMapr available over a network where it could be used by multiple devices at the same time.</p>
+        <h2 data-i18n="s1-title">1. License Grant</h2>
+        <p data-i18n="s1-p1">MailMapr grants you a limited, non-exclusive, non-transferable, revocable license to use the application on any Apple-branded device that you own or control, subject to the Apple Media Services Terms and Conditions.</p>
+        <p data-i18n="s1-p2">This license does not allow you to use MailMapr on any device you do not own or control, and you may not distribute or make MailMapr available over a network where it could be used by multiple devices at the same time.</p>
 
-        <h2>2. Intellectual Property</h2>
-        <p>MailMapr, including its code, design, graphics, interface, and documentation, is the intellectual property of MailMapr and is protected by copyright and other intellectual property laws.</p>
+        <h2 data-i18n="s2-title">2. Intellectual Property</h2>
+        <p data-i18n="s2-p1">MailMapr, including its code, design, graphics, interface, and documentation, is the intellectual property of MailMapr and is protected by copyright and other intellectual property laws.</p>
         <ul>
-            <li>You may not copy, modify, reverse-engineer, decompile, or disassemble the application</li>
-            <li>You may not create derivative works based on MailMapr</li>
-            <li>You may not remove, alter, or obscure any copyright, trademark, or proprietary notices</li>
-            <li>The name "MailMapr", its logo, and associated branding are trademarks of MailMapr</li>
+            <li data-i18n="s2-li1">You may not copy, modify, reverse-engineer, decompile, or disassemble the application</li>
+            <li data-i18n="s2-li2">You may not create derivative works based on MailMapr</li>
+            <li data-i18n="s2-li3">You may not remove, alter, or obscure any copyright, trademark, or proprietary notices</li>
+            <li data-i18n="s2-li4">The name "MailMapr", its logo, and associated branding are trademarks of MailMapr</li>
         </ul>
 
-        <h2>3. Permitted Use</h2>
-        <p>MailMapr is designed for lawful email analysis and forensic investigation purposes. You agree to:</p>
+        <h2 data-i18n="s3-title">3. Permitted Use</h2>
+        <p data-i18n="s3-p1">MailMapr is designed for lawful email analysis and forensic investigation purposes. You agree to:</p>
         <ul>
-            <li>Use MailMapr only for lawful purposes and in compliance with all applicable laws</li>
-            <li>Ensure you have proper authorization to analyze any email files you import</li>
-            <li>Not use MailMapr to violate the privacy rights of others</li>
-            <li>Not use MailMapr for unauthorized surveillance or monitoring</li>
+            <li data-i18n="s3-li1">Use MailMapr only for lawful purposes and in compliance with all applicable laws</li>
+            <li data-i18n="s3-li2">Ensure you have proper authorization to analyze any email files you import</li>
+            <li data-i18n="s3-li3">Not use MailMapr to violate the privacy rights of others</li>
+            <li data-i18n="s3-li4">Not use MailMapr for unauthorized surveillance or monitoring</li>
         </ul>
 
-        <h2>4. No Warranty</h2>
-        <p>MailMapr is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, either express or implied, including but not limited to:</p>
+        <h2 data-i18n="s4-title">4. No Warranty</h2>
+        <p data-i18n="s4-p1">MailMapr is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, either express or implied, including but not limited to:</p>
         <ul>
-            <li>Implied warranties of merchantability and fitness for a particular purpose</li>
-            <li>Accuracy or completeness of forensic analysis results</li>
-            <li>Uninterrupted or error-free operation</li>
+            <li data-i18n="s4-li1">Implied warranties of merchantability and fitness for a particular purpose</li>
+            <li data-i18n="s4-li2">Accuracy or completeness of forensic analysis results</li>
+            <li data-i18n="s4-li3">Uninterrupted or error-free operation</li>
         </ul>
-        <p>Forensic analysis results produced by MailMapr are intended as investigative aids and should be verified by qualified professionals before being used in legal proceedings or official reports.</p>
+        <p data-i18n="s4-p2">Forensic analysis results produced by MailMapr are intended as investigative aids and should be verified by qualified professionals before being used in legal proceedings or official reports.</p>
 
-        <h2>5. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by applicable law, MailMapr and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+        <h2 data-i18n="s5-title">5. Limitation of Liability</h2>
+        <p data-i18n="s5-p1">To the maximum extent permitted by applicable law, MailMapr and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
         <ul>
-            <li>Loss of data, revenue, or profits</li>
-            <li>Damages arising from reliance on forensic analysis results</li>
-            <li>Business interruption or loss of business information</li>
+            <li data-i18n="s5-li1">Loss of data, revenue, or profits</li>
+            <li data-i18n="s5-li2">Damages arising from reliance on forensic analysis results</li>
+            <li data-i18n="s5-li3">Business interruption or loss of business information</li>
         </ul>
-        <p>In no event shall our total liability exceed the amount you paid for the application.</p>
+        <p data-i18n="s5-p2">In no event shall our total liability exceed the amount you paid for the application.</p>
 
-        <h2>6. Data &amp; Privacy</h2>
-        <p>MailMapr processes all data locally on your device. We do not collect, transmit, or have access to any data you analyze. You are solely responsible for the security and handling of your email evidence files. For full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+        <h2 data-i18n="s6-title">6. Data &amp; Privacy</h2>
+        <p data-i18n="s6-p1">MailMapr processes all data locally on your device. We do not collect, transmit, or have access to any data you analyze. You are solely responsible for the security and handling of your email evidence files. For full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
 
-        <h2>7. Open-Source Components</h2>
-        <p>MailMapr incorporates the following open-source libraries:</p>
+        <h2 data-i18n="s7-title">7. Open-Source Components</h2>
+        <p data-i18n="s7-p1">MailMapr incorporates the following open-source libraries:</p>
         <ul>
-            <li><strong>ZIPFoundation</strong> &mdash; MIT License &copy; 2017&ndash;2025 Thomas Zoechling</li>
-            <li><strong>OLEKit</strong> &mdash; Apache License 2.0 &copy; 2020 OLEKit contributors</li>
+            <li data-i18n="s7-li1"><strong>ZIPFoundation</strong> &mdash; MIT License &copy; 2017&ndash;2025 Thomas Zoechling</li>
+            <li data-i18n="s7-li2"><strong>OLEKit</strong> &mdash; Apache License 2.0 &copy; 2020 OLEKit contributors</li>
         </ul>
-        <p>Full license texts for these components are available within the application under Settings &gt; About &gt; Open Source Licenses.</p>
+        <p data-i18n="s7-p2">Full license texts for these components are available within the application under Settings &gt; About &gt; Open Source Licenses.</p>
 
-        <h2>8. Apple App Store Terms</h2>
-        <p>If you obtained MailMapr through the Apple App Store, you acknowledge that:</p>
+        <h2 data-i18n="s8-title">8. Apple App Store Terms</h2>
+        <p data-i18n="s8-p1">If you obtained MailMapr through the Apple App Store, you acknowledge that:</p>
         <ul>
-            <li>This EULA is between you and MailMapr, not Apple</li>
-            <li>Apple has no obligation to provide maintenance or support for MailMapr</li>
-            <li>Apple is not responsible for any claims relating to MailMapr or your use of it</li>
-            <li>In the event of a conflict between this EULA and the Apple Media Services Terms and Conditions, the Apple terms shall prevail</li>
-            <li>Apple and its subsidiaries are third-party beneficiaries of this EULA</li>
+            <li data-i18n="s8-li1">This EULA is between you and MailMapr, not Apple</li>
+            <li data-i18n="s8-li2">Apple has no obligation to provide maintenance or support for MailMapr</li>
+            <li data-i18n="s8-li3">Apple is not responsible for any claims relating to MailMapr or your use of it</li>
+            <li data-i18n="s8-li4">In the event of a conflict between this EULA and the Apple Media Services Terms and Conditions, the Apple terms shall prevail</li>
+            <li data-i18n="s8-li5">Apple and its subsidiaries are third-party beneficiaries of this EULA</li>
         </ul>
 
-        <h2>9. Termination</h2>
-        <p>This license is effective until terminated. Your rights under this license will terminate automatically if you fail to comply with any of its terms. Upon termination, you must cease all use of MailMapr and destroy all copies in your possession.</p>
+        <h2 data-i18n="s9-title">9. Termination</h2>
+        <p data-i18n="s9-p1">This license is effective until terminated. Your rights under this license will terminate automatically if you fail to comply with any of its terms. Upon termination, you must cease all use of MailMapr and destroy all copies in your possession.</p>
 
-        <h2>10. Changes to These Terms</h2>
-        <p>We reserve the right to update these terms at any time. Changes will be posted on this page with an updated revision date. Continued use of MailMapr after changes constitutes acceptance of the revised terms.</p>
+        <h2 data-i18n="s10-title">10. Changes to These Terms</h2>
+        <p data-i18n="s10-p1">We reserve the right to update these terms at any time. Changes will be posted on this page with an updated revision date. Continued use of MailMapr after changes constitutes acceptance of the revised terms.</p>
 
-        <h2>11. Governing Law</h2>
-        <p>These terms shall be governed by and construed in accordance with applicable law, without regard to conflict of law principles.</p>
+        <h2 data-i18n="s11-title">11. Governing Law</h2>
+        <p data-i18n="s11-p1">These terms shall be governed by and construed in accordance with applicable law, without regard to conflict of law principles.</p>
 
-        <h2>12. Contact</h2>
-        <p>For questions about these terms, please contact us at:</p>
+        <h2 data-i18n="s12-title">12. Contact</h2>
+        <p data-i18n="s12-p1">For questions about these terms, please contact us at:</p>
         <p><a href="mailto:support@mailmapr.com">support@mailmapr.com</a></p>
 
         <div class="back">
-            <a href="index.html">&larr; Back to MailMapr</a>
+            <a href="index.html" data-i18n="back-link">&larr; Back to MailMapr</a>
         </div>
 
         <div class="footer">
-            <p>&copy; 2026 MailMapr. All rights reserved.</p>
+            <p>&copy; 2026 MailMapr. <span data-i18n="footer-rights">All rights reserved.</span></p>
             <p style="margin-top: 8px;">
-                <a href="privacy.html">Privacy</a>
-                <a href="eula.html">Terms</a>
-                <a href="support.html">Support</a>
+                <a href="privacy.html" data-i18n="footer-privacy">Privacy</a>
+                <a href="eula.html" data-i18n="footer-terms">Terms</a>
+                <a href="support.html" data-i18n="footer-support">Support</a>
             </p>
         </div>
     </div>
+
+    <script>
+        var translations = {
+            es: {
+                'nav-home': 'Inicio',
+                'nav-privacy': 'Privacidad',
+                'nav-support': 'Soporte',
+                'title': 'T\u00e9rminos de Uso',
+                'subtitle': 'Acuerdo de Licencia de Usuario Final (EULA) &mdash; \u00daltima actualizaci\u00f3n: 19 de marzo de 2026',
+                'highlight-disclaimer': 'Al descargar, instalar o utilizar MailMapr, usted acepta estos t\u00e9rminos. Si no est\u00e1 de acuerdo, no utilice la aplicaci\u00f3n.',
+                's1-title': '1. Concesi\u00f3n de Licencia',
+                's1-p1': 'MailMapr le otorga una licencia limitada, no exclusiva, intransferible y revocable para utilizar la aplicaci\u00f3n en cualquier dispositivo de la marca Apple que usted posea o controle, sujeta a los T\u00e9rminos y Condiciones de los Servicios de Medios de Apple.',
+                's1-p2': 'Esta licencia no le permite utilizar MailMapr en ning\u00fan dispositivo que usted no posea o controle, y no podr\u00e1 distribuir ni poner MailMapr a disposici\u00f3n a trav\u00e9s de una red en la que pueda ser utilizada por m\u00faltiples dispositivos simult\u00e1neamente.',
+                's2-title': '2. Propiedad Intelectual',
+                's2-p1': 'MailMapr, incluyendo su c\u00f3digo, dise\u00f1o, gr\u00e1ficos, interfaz y documentaci\u00f3n, es propiedad intelectual de MailMapr y est\u00e1 protegida por las leyes de derechos de autor y otras leyes de propiedad intelectual.',
+                's2-li1': 'No podr\u00e1 copiar, modificar, aplicar ingenier\u00eda inversa, descompilar ni desensamblar la aplicaci\u00f3n',
+                's2-li2': 'No podr\u00e1 crear obras derivadas basadas en MailMapr',
+                's2-li3': 'No podr\u00e1 eliminar, alterar u ocultar ning\u00fan aviso de derechos de autor, marca registrada o propiedad',
+                's2-li4': 'El nombre \u201cMailMapr\u201d, su logotipo y la marca asociada son marcas registradas de MailMapr',
+                's3-title': '3. Uso Permitido',
+                's3-p1': 'MailMapr est\u00e1 dise\u00f1ado para fines l\u00edcitos de an\u00e1lisis de correo electr\u00f3nico e investigaci\u00f3n forense. Usted se compromete a:',
+                's3-li1': 'Utilizar MailMapr \u00fanicamente con fines l\u00edcitos y en cumplimiento de todas las leyes aplicables',
+                's3-li2': 'Asegurarse de contar con la autorizaci\u00f3n adecuada para analizar cualquier archivo de correo que importe',
+                's3-li3': 'No utilizar MailMapr para vulnerar los derechos de privacidad de terceros',
+                's3-li4': 'No utilizar MailMapr para vigilancia o monitoreo no autorizados',
+                's4-title': '4. Exclusi\u00f3n de Garant\u00edas',
+                's4-p1': 'MailMapr se proporciona <strong>\u201ctal cual\u201d</strong> y <strong>\u201cseg\u00fan disponibilidad\u201d</strong> sin garant\u00edas de ning\u00fan tipo, ya sean expresas o impl\u00edcitas, incluyendo, entre otras:',
+                's4-li1': 'Garant\u00edas impl\u00edcitas de comerciabilidad e idoneidad para un fin determinado',
+                's4-li2': 'Precisi\u00f3n o integridad de los resultados del an\u00e1lisis forense',
+                's4-li3': 'Funcionamiento ininterrumpido o libre de errores',
+                's4-p2': 'Los resultados del an\u00e1lisis forense generados por MailMapr tienen car\u00e1cter de herramienta de apoyo a la investigaci\u00f3n y deben ser verificados por profesionales cualificados antes de ser utilizados en procedimientos judiciales o informes oficiales.',
+                's5-title': '5. Limitaci\u00f3n de Responsabilidad',
+                's5-p1': 'En la m\u00e1xima medida permitida por la legislaci\u00f3n aplicable, MailMapr y su desarrollador no ser\u00e1n responsables de ning\u00fan da\u00f1o indirecto, incidental, especial, consecuente o punitivo, incluyendo, entre otros:',
+                's5-li1': 'P\u00e9rdida de datos, ingresos o beneficios',
+                's5-li2': 'Da\u00f1os derivados de la confianza en los resultados del an\u00e1lisis forense',
+                's5-li3': 'Interrupci\u00f3n de la actividad comercial o p\u00e9rdida de informaci\u00f3n empresarial',
+                's5-p2': 'En ning\u00fan caso nuestra responsabilidad total exceder\u00e1 el importe que usted haya pagado por la aplicaci\u00f3n.',
+                's6-title': '6. Datos y Privacidad',
+                's6-p1': 'MailMapr procesa todos los datos de forma local en su dispositivo. No recopilamos, transmitimos ni tenemos acceso a ning\u00fan dato que usted analice. Usted es el \u00fanico responsable de la seguridad y el manejo de sus archivos de evidencia de correo electr\u00f3nico. Para m\u00e1s informaci\u00f3n, consulte nuestra <a href="privacy.html">Pol\u00edtica de Privacidad</a>.',
+                's7-title': '7. Componentes de C\u00f3digo Abierto',
+                's7-p1': 'MailMapr incorpora las siguientes bibliotecas de c\u00f3digo abierto:',
+                's7-li1': '<strong>ZIPFoundation</strong> &mdash; Licencia MIT &copy; 2017&ndash;2025 Thomas Zoechling',
+                's7-li2': '<strong>OLEKit</strong> &mdash; Licencia Apache 2.0 &copy; 2020 Colaboradores de OLEKit',
+                's7-p2': 'Los textos completos de las licencias de estos componentes est\u00e1n disponibles dentro de la aplicaci\u00f3n en Configuraci\u00f3n &gt; Acerca de &gt; Licencias de C\u00f3digo Abierto.',
+                's8-title': '8. T\u00e9rminos del App Store de Apple',
+                's8-p1': 'Si usted obtuvo MailMapr a trav\u00e9s del App Store de Apple, reconoce que:',
+                's8-li1': 'Este EULA es un acuerdo entre usted y MailMapr, no con Apple',
+                's8-li2': 'Apple no tiene obligaci\u00f3n alguna de proporcionar mantenimiento o soporte para MailMapr',
+                's8-li3': 'Apple no es responsable de ninguna reclamaci\u00f3n relacionada con MailMapr o su uso',
+                's8-li4': 'En caso de conflicto entre este EULA y los T\u00e9rminos y Condiciones de los Servicios de Medios de Apple, prevalecer\u00e1n los t\u00e9rminos de Apple',
+                's8-li5': 'Apple y sus subsidiarias son terceros beneficiarios de este EULA',
+                's9-title': '9. Rescisi\u00f3n',
+                's9-p1': 'Esta licencia es efectiva hasta su rescisi\u00f3n. Sus derechos bajo esta licencia se extinguir\u00e1n autom\u00e1ticamente si usted incumple cualquiera de sus t\u00e9rminos. Tras la rescisi\u00f3n, deber\u00e1 cesar todo uso de MailMapr y destruir todas las copias en su posesi\u00f3n.',
+                's10-title': '10. Modificaciones de Estos T\u00e9rminos',
+                's10-p1': 'Nos reservamos el derecho de actualizar estos t\u00e9rminos en cualquier momento. Los cambios se publicar\u00e1n en esta p\u00e1gina con una fecha de revisi\u00f3n actualizada. El uso continuado de MailMapr despu\u00e9s de los cambios constituye la aceptaci\u00f3n de los t\u00e9rminos revisados.',
+                's11-title': '11. Legislaci\u00f3n Aplicable',
+                's11-p1': 'Estos t\u00e9rminos se regir\u00e1n e interpretar\u00e1n de conformidad con la legislaci\u00f3n aplicable, sin tener en cuenta los principios sobre conflictos de leyes.',
+                's12-title': '12. Contacto',
+                's12-p1': 'Para consultas sobre estos t\u00e9rminos, cont\u00e1ctenos en:',
+                'back-link': '&larr; Volver a MailMapr',
+                'footer-rights': 'Todos los derechos reservados.',
+                'footer-privacy': 'Privacidad',
+                'footer-terms': 'T\u00e9rminos',
+                'footer-support': 'Soporte'
+            }
+        };
+
+        var enTexts = {};
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (lang === 'es') {
+                    if (!enTexts[key]) enTexts[key] = el.innerHTML;
+                    if (translations.es[key]) el.innerHTML = translations.es[key];
+                } else {
+                    if (enTexts[key]) el.innerHTML = enTexts[key];
+                }
+            });
+            document.getElementById('lang-en').style.color = lang === 'en' ? '#58a6ff' : '#6e7681';
+            document.getElementById('lang-en').style.fontWeight = lang === 'en' ? '700' : '400';
+            document.getElementById('lang-es').style.color = lang === 'es' ? '#58a6ff' : '#6e7681';
+            document.getElementById('lang-es').style.fontWeight = lang === 'es' ? '700' : '400';
+            document.documentElement.lang = lang;
+            localStorage.setItem('mailmapr-lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var saved = localStorage.getItem('mailmapr-lang');
+            if (saved === 'es') setLang('es');
+        });
+    </script>
 </body>
 </html>

@@ -364,74 +364,80 @@
 </head>
 <body>
     <nav class="nav">
-        <a href="index.html" class="nav-brand">MailMapr</a>
+        <a href="index.html" class="nav-brand"><img src="screenshots/MailMapr.png" alt="" style="width: 22px; height: 22px; border-radius: 5px; vertical-align: middle; margin-right: 6px;">MailMapr</a>
         <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="support.html">Support</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="eula.html">Terms</a>
+            <a href="#features" data-i18n="nav-features">Features</a>
+            <a href="support.html" data-i18n="nav-support">Support</a>
+            <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
+            <a href="eula.html" data-i18n="nav-terms">Terms</a>
+            <span class="lang-toggle" style="margin-left: 20px; cursor: pointer; user-select: none;">
+                <span id="lang-en" style="color: #58a6ff; font-weight: 700;" onclick="setLang('en')">EN</span>
+                <span style="color: #30363d; margin: 0 2px;">|</span>
+                <span id="lang-es" style="color: #6e7681;" onclick="setLang('es')">ES</span>
+            </span>
         </div>
     </nav>
 
     <div class="hero">
+        <img src="screenshots/MailMapr.png" alt="MailMapr Logo" style="width: 120px; height: 120px; margin-bottom: 16px; border-radius: 22px; box-shadow: 0 4px 24px rgba(88,166,255,0.2);">
         <h1>MailMapr</h1>
-        <p>Email Viewer &amp; Forensic Analysis for macOS</p>
-        <p class="tagline">Open. Analyze. Investigate. Report.</p>
+        <p data-i18n="hero-sub">Email Viewer &amp; Forensic Analysis for macOS</p>
+        <p class="tagline" data-i18n="hero-tagline">Open. Analyze. Investigate. Report.</p>
         <div class="badge-row">
             <span class="badge badge-blue">macOS 14+</span>
             <span class="badge badge-green">App Store</span>
-            <span class="badge badge-orange">English &amp; Spanish</span>
-            <span class="badge badge-purple">100% Offline</span>
+            <span class="badge badge-orange" data-i18n="badge-lang">English &amp; Spanish</span>
+            <span class="badge badge-purple" data-i18n="badge-offline">100% Offline</span>
         </div>
         <div class="cta">
             <a href="https://apps.apple.com/app/mailmapr/id6760811510" class="cta-button" id="appstore-link">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                Download on the Mac App Store
+                <span data-i18n="cta-button">Download on the Mac App Store</span>
             </a>
-            <p class="cta-sub">Requires macOS 14.0 Sonoma or later</p>
+            <p class="cta-sub" data-i18n="cta-sub">Requires macOS 14.0 Sonoma or later</p>
         </div>
     </div>
 
     <!-- Who is it for -->
     <div class="use-cases">
-        <h2>Built for professionals who handle email evidence</h2>
-        <p class="sub">Whether you're investigating phishing, auditing communications, or simply need to open email files</p>
+        <h2 data-i18n="use-title">Built for professionals who handle email evidence</h2>
+        <p class="sub" data-i18n="use-sub">Whether you're investigating phishing, auditing communications, or simply need to open email files</p>
         <div class="personas">
             <div class="persona">
                 <div class="icon">&#128373;</div>
-                <h3>Cybersecurity Analysts</h3>
-                <p>Investigate phishing attacks, detect spoofing, identify IoCs and compromised accounts.</p>
+                <h3 data-i18n="persona1-title">Cybersecurity Analysts</h3>
+                <p data-i18n="persona1-desc">Investigate phishing attacks, detect spoofing, identify IoCs and compromised accounts.</p>
             </div>
             <div class="persona">
                 <div class="icon">&#9878;</div>
-                <h3>Legal &amp; Compliance</h3>
-                <p>Review email evidence with chain-of-custody. Export forensic reports for legal proceedings.</p>
+                <h3 data-i18n="persona2-title">Legal &amp; Compliance</h3>
+                <p data-i18n="persona2-desc">Review email evidence with chain-of-custody. Export forensic reports for legal proceedings.</p>
             </div>
             <div class="persona">
                 <div class="icon">&#128187;</div>
-                <h3>IT Administrators</h3>
-                <p>Open and view EML/MSG files. Convert between formats. Analyze suspicious emails from users.</p>
+                <h3 data-i18n="persona3-title">IT Administrators</h3>
+                <p data-i18n="persona3-desc">Open and view EML/MSG files. Convert between formats. Analyze suspicious emails from users.</p>
             </div>
         </div>
     </div>
 
     <!-- Email Viewer & Converter -->
     <div class="section-title">
-        <h2>Powerful Email Viewer &amp; Converter</h2>
-        <p>No Outlook or email client needed &mdash; open any email file directly</p>
+        <h2 data-i18n="viewer-title">Powerful Email Viewer &amp; Converter</h2>
+        <p data-i18n="viewer-sub">No Outlook or email client needed &mdash; open any email file directly</p>
     </div>
 
     <div class="feature-full" style="margin-left: auto; margin-right: auto; padding: 20px;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
-                <h3>&#128441; View Any Email File</h3>
-                <p>Open EML, EMLX, MSG (Outlook), and MBOX archives without any email client installed. View full message body, headers, attachments, and metadata.</p>
-                <p style="margin-top: 8px;"><strong style="color:#3fb950;">Quick View mode</strong> &mdash; open and inspect email files without creating a project.</p>
+                <h3 data-i18n="viewer-view-title">&#128441; View Any Email File</h3>
+                <p data-i18n="viewer-view-desc">Open EML, EMLX, MSG (Outlook), and MBOX archives without any email client installed. View full message body, headers, attachments, and metadata.</p>
+                <p style="margin-top: 8px;" data-i18n="viewer-quickview"><strong style="color:#3fb950;">Quick View mode</strong> &mdash; open and inspect email files without creating a project.</p>
             </div>
             <div>
-                <h3>&#128260; Export &amp; Convert</h3>
-                <p>Export email evidence to PDF for sharing with teams, legal departments, or management. Generate professional forensic reports in HTML and PDF formats.</p>
-                <p style="margin-top: 8px;"><strong style="color:#3fb950;">Batch analysis</strong> &mdash; import multiple files at once via drag &amp; drop.</p>
+                <h3 data-i18n="viewer-export-title">&#128260; Export &amp; Convert</h3>
+                <p data-i18n="viewer-export-desc">Export email evidence to PDF for sharing with teams, legal departments, or management. Generate professional forensic reports in HTML and PDF formats.</p>
+                <p style="margin-top: 8px;" data-i18n="viewer-batch"><strong style="color:#3fb950;">Batch analysis</strong> &mdash; import multiple files at once via drag &amp; drop.</p>
             </div>
         </div>
         <div class="format-list">
@@ -446,50 +452,50 @@
 
     <!-- Forensic Features -->
     <div class="section-title" id="features" style="padding-top: 60px;">
-        <h2>Deep Forensic Analysis</h2>
-        <p>Everything you need to investigate email-based threats</p>
+        <h2 data-i18n="forensic-title">Deep Forensic Analysis</h2>
+        <p data-i18n="forensic-sub">Everything you need to investigate email-based threats</p>
     </div>
 
     <div class="features">
         <div class="feature">
             <div class="feat-icon">&#128270;</div>
-            <h3>Phishing Detection</h3>
-            <p>Automatic risk scoring (0&ndash;100) per email. Detect header spoofing, domain mismatches, authentication failures (SPF, DKIM, DMARC), and suspicious patterns.</p>
+            <h3 data-i18n="f1-title">Phishing Detection</h3>
+            <p data-i18n="f1-desc">Automatic risk scoring (0&ndash;100) per email. Detect header spoofing, domain mismatches, authentication failures (SPF, DKIM, DMARC), and suspicious patterns.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#127912;</div>
-            <h3>Trust Color Coding</h3>
-            <p>Emails, domains, and IPs color-coded by trust: <span style="color:#3fb950;">green</span> (whitelist), <span style="color:#d29922;">orange</span> (suspicious), <span style="color:#f85149;">red</span> (blacklist). Instant visual threat assessment.</p>
+            <h3 data-i18n="f2-title">Trust Color Coding</h3>
+            <p data-i18n="f2-desc">Emails, domains, and IPs color-coded by trust: <span style="color:#3fb950;">green</span> (whitelist), <span style="color:#d29922;">orange</span> (suspicious), <span style="color:#f85149;">red</span> (blacklist). Instant visual threat assessment.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#128200;</div>
-            <h3>Timeline Analysis</h3>
-            <p>Visualize email communication patterns over time. Identify anomalies, timeline gaps, and correlate events across an incident.</p>
+            <h3 data-i18n="f3-title">Timeline Analysis</h3>
+            <p data-i18n="f3-desc">Visualize email communication patterns over time. Identify anomalies, timeline gaps, and correlate events across an incident.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#127760;</div>
-            <h3>Network Graph</h3>
-            <p>Map communication relationships between all addresses. Detect communities, identify attack hubs and entry vectors visually.</p>
+            <h3 data-i18n="f4-title">Network Graph</h3>
+            <p data-i18n="f4-desc">Map communication relationships between all addresses. Detect communities, identify attack hubs and entry vectors visually.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#9888;</div>
-            <h3>Indicators of Compromise</h3>
-            <p>Track malicious emails, domains, and IPs as IoCs. Record threat level, source, and occurrences. Export for threat intelligence sharing.</p>
+            <h3 data-i18n="f5-title">Indicators of Compromise</h3>
+            <p data-i18n="f5-desc">Track malicious emails, domains, and IPs as IoCs. Record threat level, source, and occurrences. Export for threat intelligence sharing.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#128196;</div>
-            <h3>Professional Reports</h3>
-            <p>Generate Technical Forensic and Executive Summary reports. Full email analysis, risk breakdown, trust distribution, and per-incident details.</p>
+            <h3 data-i18n="f6-title">Professional Reports</h3>
+            <p data-i18n="f6-desc">Generate Technical Forensic and Executive Summary reports. Full email analysis, risk breakdown, trust distribution, and per-incident details.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#128101;</div>
-            <h3>Cross-Incident Correlation</h3>
-            <p>Identify recurring contacts across multiple investigations. Detect coordinated attacks spanning different cases and timeframes.</p>
+            <h3 data-i18n="f7-title">Cross-Incident Correlation</h3>
+            <p data-i18n="f7-desc">Identify recurring contacts across multiple investigations. Detect coordinated attacks spanning different cases and timeframes.</p>
         </div>
         <div class="feature">
             <div class="feat-icon">&#128274;</div>
-            <h3>Privacy First</h3>
-            <p>100% offline analysis. No data leaves your Mac. No cloud, no accounts, no tracking. App Sandbox protected. Your evidence stays yours.</p>
+            <h3 data-i18n="f8-title">Privacy First</h3>
+            <p data-i18n="f8-desc">100% offline analysis. No data leaves your Mac. No cloud, no accounts, no tracking. App Sandbox protected. Your evidence stays yours.</p>
         </div>
     </div>
 
@@ -498,117 +504,117 @@
         <div class="highlight-row">
             <div class="stat">
                 <div class="num">4</div>
-                <div class="label">Email formats supported</div>
+                <div class="label" data-i18n="stat1">Email formats supported</div>
             </div>
             <div class="stat">
                 <div class="num">3</div>
-                <div class="label">Report types</div>
+                <div class="label" data-i18n="stat2">Report types</div>
             </div>
             <div class="stat">
                 <div class="num">2</div>
-                <div class="label">Languages</div>
+                <div class="label" data-i18n="stat3">Languages</div>
             </div>
             <div class="stat">
                 <div class="num">0</div>
-                <div class="label">Data sent to cloud</div>
+                <div class="label" data-i18n="stat4">Data sent to cloud</div>
             </div>
         </div>
     </div>
 
     <!-- Screenshots -->
     <div class="section-title" style="padding-top: 60px;">
-        <h2>See It in Action</h2>
-        <p>Click any screenshot to enlarge</p>
+        <h2 data-i18n="screenshots-title">See It in Action</h2>
+        <p data-i18n="screenshots-sub">Click any screenshot to enlarge</p>
     </div>
 
     <div class="gallery">
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/dashboard.png" alt="MailMapr Project Dashboard" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-dashboard">
                     <strong>Project Dashboard</strong>
                     Risk distribution, trust analysis, threat vectors, flagged senders, and IoC tracking at a glance.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/global-dashboard.png" alt="MailMapr Global Dashboard" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-global">
                     <strong>Global Dashboard</strong>
                     Cross-project analysis with incident timeline, risk scores, and cross-incident contact correlation.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/correlation-email.png" alt="MailMapr Email Correlation Network" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-corr-email">
                     <strong>Correlation &mdash; Email Network</strong>
                     Interactive network graph mapping sender relationships. Color-coded by trust level with centrality metrics.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/correlation-threads.png" alt="MailMapr Thread Correlation" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-corr-threads">
                     <strong>Correlation &mdash; Threads</strong>
-                    Visualize email threads and their relationships. Inspect individual messages with full metadata.
+                    Visualize conversation threads as interactive graphs. Related emails are linked automatically, revealing reply chains, forwarding patterns, and connections between incidents.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/Timeline.png" alt="MailMapr Timeline Analysis" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-timeline">
                     <strong>Timeline Analysis</strong>
                     Visualize email threads over time. Inspect individual messages with phishing tags, body preview, and full metadata.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/Message.png" alt="MailMapr Email Headers and Message View" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-message">
                     <strong>Message &amp; Headers</strong>
                     Full header analysis with parsed fields, SPF/DKIM/DMARC results, IP addresses, and authentication details.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/IoC.png" alt="MailMapr Indicators of Compromise" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-ioc">
                     <strong>Indicators of Compromise</strong>
                     Track and tag malicious emails, domains, and IPs. Add IoCs with threat level, notes, and associated evidence.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/Report.png" alt="MailMapr Forensic Reports" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-report">
                     <strong>Professional Reports</strong>
                     Generate Technical Forensic and Executive Summary reports with email activity timeline and thread network visualizations.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/ingest.png" alt="MailMapr Ingest and Email Viewer" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-ingest">
                     <strong>Ingest &amp; Email Viewer</strong>
                     Import emails via drag &amp; drop. View message body, headers, raw content, and metadata with phishing tags.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/import.png" alt="MailMapr Import Investigation Data" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-import">
                     <strong>Import Investigation Data</strong>
                     Import trust lists, evidence tags, IoC index, and marks from another project with merge or replace options.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/export.png" alt="MailMapr Export Investigation Data" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-export">
                     <strong>Export Investigation Data</strong>
                     Export trust lists, evidence tags, IoC index, and message marks for sharing or archiving.
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="screenshots/Launcher.png" alt="MailMapr Home Screen" loading="lazy">
-                <div class="caption">
+                <div class="caption" data-i18n="cap-launcher">
                     <strong>Home &amp; Workspace</strong>
                     Workspace overview with project list, incident timeline, Quick View for instant file inspection, and project creation.
                 </div>
             </div>
         </div>
-        <p style="text-align: center; font-size: 11px; color: #6e7681; margin-top: 16px; font-style: italic;">All email addresses, company names, and domains shown in screenshots are entirely fictitious and created for demonstration purposes using the IANA-reserved .test TLD.</p>
+        <p style="text-align: center; font-size: 11px; color: #6e7681; margin-top: 16px; font-style: italic;" data-i18n="screenshots-disclaimer">All email addresses, company names, and domains shown in screenshots are entirely fictitious and created for demonstration purposes using the IANA-reserved .test TLD.</p>
     </div>
 
     <!-- Lightbox -->
@@ -618,45 +624,45 @@
 
     <!-- How It Works -->
     <div class="section-title" style="padding-top: 60px;">
-        <h2>How It Works</h2>
-        <p>From email import to forensic report in four steps</p>
+        <h2 data-i18n="how-title">How It Works</h2>
+        <p data-i18n="how-sub">From email import to forensic report in four steps</p>
     </div>
 
     <div class="how-it-works">
         <div class="steps-grid">
             <div class="step">
                 <div class="step-num">1</div>
-                <h3>Create a Project</h3>
-                <p>Organize your investigation by creating a project. Each project keeps evidence, analysis, and reports separate and self-contained.</p>
+                <h3 data-i18n="step1-title">Create a Project</h3>
+                <p data-i18n="step1-desc">Organize your investigation by creating a project. Each project keeps evidence, analysis, and reports separate and self-contained.</p>
             </div>
             <div class="step">
                 <div class="step-num">2</div>
-                <h3>Import Evidence</h3>
-                <p>Drag and drop EML, MSG, or MBOX files into the Ingest module. MailMapr parses headers, body, attachments, and metadata automatically. Use Quick View to inspect files without a project.</p>
+                <h3 data-i18n="step2-title">Import Evidence</h3>
+                <p data-i18n="step2-desc">Drag and drop EML, MSG, or MBOX files into the Ingest module. MailMapr parses headers, body, attachments, and metadata automatically. Use Quick View to inspect files without a project.</p>
             </div>
             <div class="step">
                 <div class="step-num">3</div>
-                <h3>Analyze &amp; Investigate</h3>
-                <p>Review phishing risk scores, SPF/DKIM/DMARC results, and trust color coding. Use Timeline, Correlation graphs, and Indicators to map the full attack picture.</p>
+                <h3 data-i18n="step3-title">Analyze &amp; Investigate</h3>
+                <p data-i18n="step3-desc">Review phishing risk scores, SPF/DKIM/DMARC results, and trust color coding. Use Timeline, Correlation graphs, and Indicators to map the full attack picture.</p>
             </div>
             <div class="step">
                 <div class="step-num">4</div>
-                <h3>Generate Reports</h3>
-                <p>Export Technical Forensic or Executive Summary reports as HTML or PDF. Share findings with management, legal teams, or incident responders.</p>
+                <h3 data-i18n="step4-title">Generate Reports</h3>
+                <p data-i18n="step4-desc">Export Technical Forensic or Executive Summary reports as HTML or PDF. Share findings with management, legal teams, or incident responders.</p>
             </div>
         </div>
     </div>
 
     <div class="links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="eula.html">Terms of Use</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:support@mailmapr.com">Contact</a>
+        <a href="privacy.html" data-i18n="link-privacy">Privacy Policy</a>
+        <a href="eula.html" data-i18n="link-terms">Terms of Use</a>
+        <a href="support.html" data-i18n="link-support">Support</a>
+        <a href="mailto:support@mailmapr.com" data-i18n="link-contact">Contact</a>
     </div>
 
     <div class="footer">
-        <p>&copy; 2026 MailMapr. All rights reserved.</p>
-        <p style="margin-top: 6px;">Available on the Mac App Store.</p>
+        <p>&copy; 2026 MailMapr. <span data-i18n="footer-rights">All rights reserved.</span></p>
+        <p style="margin-top: 6px;" data-i18n="footer-available">Available on the Mac App Store.</p>
         <p style="margin-top: 8px;">
             <a href="privacy.html">Privacy</a>
             <a href="eula.html">Terms</a>
@@ -675,6 +681,115 @@
         }
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeLightbox();
+        });
+
+        var translations = {
+            es: {
+                'nav-features': 'Funciones',
+                'nav-support': 'Soporte',
+                'nav-privacy': 'Privacidad',
+                'nav-terms': 'T\u00e9rminos',
+                'hero-sub': 'Visor de correo y an\u00e1lisis forense para macOS',
+                'hero-tagline': 'Abrir. Analizar. Investigar. Reportar.',
+                'badge-lang': 'Ingl\u00e9s y Espa\u00f1ol',
+                'badge-offline': '100% Sin conexi\u00f3n',
+                'cta-button': 'Descargar en la Mac App Store',
+                'cta-sub': 'Requiere macOS 14.0 Sonoma o posterior',
+                'use-title': 'Dise\u00f1ado para profesionales que manejan evidencia de correo',
+                'use-sub': 'Ya sea que est\u00e9s investigando phishing, auditando comunicaciones o simplemente necesites abrir archivos de correo',
+                'persona1-title': 'Analistas de Ciberseguridad',
+                'persona1-desc': 'Investiga ataques de phishing, detecta spoofing, identifica IoCs y cuentas comprometidas.',
+                'persona2-title': 'Legal y Cumplimiento',
+                'persona2-desc': 'Revisa evidencia de correo con cadena de custodia. Exporta reportes forenses para procedimientos legales.',
+                'persona3-title': 'Administradores de TI',
+                'persona3-desc': 'Abre y visualiza archivos EML/MSG. Convierte entre formatos. Analiza correos sospechosos de usuarios.',
+                'viewer-title': 'Potente visor y convertidor de correo',
+                'viewer-sub': 'Sin necesidad de Outlook ni cliente de correo &mdash; abre cualquier archivo de correo directamente',
+                'viewer-view-title': '&#128441; Ver cualquier archivo de correo',
+                'viewer-view-desc': 'Abre archivos EML, EMLX, MSG (Outlook) y MBOX sin ning\u00fan cliente de correo instalado. Visualiza el cuerpo del mensaje, encabezados, adjuntos y metadatos.',
+                'viewer-quickview': '<strong style="color:#3fb950;">Vista r\u00e1pida</strong> &mdash; abre e inspecciona archivos de correo sin crear un proyecto.',
+                'viewer-export-title': '&#128260; Exportar y convertir',
+                'viewer-export-desc': 'Exporta evidencia de correo a PDF para compartir con equipos, departamentos legales o direcci\u00f3n. Genera reportes forenses profesionales en formato HTML y PDF.',
+                'viewer-batch': '<strong style="color:#3fb950;">An\u00e1lisis por lotes</strong> &mdash; importa m\u00faltiples archivos a la vez arrastrando y soltando.',
+                'forensic-title': 'An\u00e1lisis forense profundo',
+                'forensic-sub': 'Todo lo que necesitas para investigar amenazas basadas en correo electr\u00f3nico',
+                'f1-title': 'Detecci\u00f3n de phishing',
+                'f1-desc': 'Puntuaci\u00f3n de riesgo autom\u00e1tica (0&ndash;100) por correo. Detecta spoofing de encabezados, discrepancias de dominio, fallos de autenticaci\u00f3n (SPF, DKIM, DMARC) y patrones sospechosos.',
+                'f2-title': 'Codificaci\u00f3n de confianza por color',
+                'f2-desc': 'Correos, dominios e IPs codificados por color seg\u00fan confianza: <span style="color:#3fb950;">verde</span> (lista blanca), <span style="color:#d29922;">naranja</span> (sospechoso), <span style="color:#f85149;">rojo</span> (lista negra). Evaluaci\u00f3n visual instant\u00e1nea de amenazas.',
+                'f3-title': 'An\u00e1lisis de l\u00ednea de tiempo',
+                'f3-desc': 'Visualiza patrones de comunicaci\u00f3n por correo a lo largo del tiempo. Identifica anomal\u00edas, brechas temporales y correlaciona eventos en un incidente.',
+                'f4-title': 'Grafo de red',
+                'f4-desc': 'Mapea relaciones de comunicaci\u00f3n entre todas las direcciones. Detecta comunidades, identifica centros de ataque y vectores de entrada visualmente.',
+                'f5-title': 'Indicadores de compromiso',
+                'f5-desc': 'Rastrea correos, dominios e IPs maliciosos como IoCs. Registra nivel de amenaza, origen y ocurrencias. Exporta para compartir inteligencia de amenazas.',
+                'f6-title': 'Reportes profesionales',
+                'f6-desc': 'Genera reportes T\u00e9cnico Forense y Resumen Ejecutivo. An\u00e1lisis completo de correos, desglose de riesgo, distribuci\u00f3n de confianza y detalles por incidente.',
+                'f7-title': 'Correlaci\u00f3n entre incidentes',
+                'f7-desc': 'Identifica contactos recurrentes en m\u00faltiples investigaciones. Detecta ataques coordinados que abarcan diferentes casos y periodos de tiempo.',
+                'f8-title': 'Privacidad primero',
+                'f8-desc': 'An\u00e1lisis 100% sin conexi\u00f3n. Ning\u00fan dato sale de tu Mac. Sin nube, sin cuentas, sin rastreo. Protegido por App Sandbox. Tu evidencia se queda contigo.',
+                'stat1': 'Formatos de correo soportados',
+                'stat2': 'Tipos de reporte',
+                'stat3': 'Idiomas',
+                'stat4': 'Datos enviados a la nube',
+                'screenshots-title': 'Mira c\u00f3mo funciona',
+                'screenshots-sub': 'Haz clic en cualquier captura para ampliar',
+                'screenshots-disclaimer': 'Todas las direcciones de correo, nombres de empresas y dominios mostrados en las capturas son completamente ficticios y fueron creados con fines de demostraci\u00f3n usando el TLD .test reservado por IANA.',
+                'how-title': 'C\u00f3mo funciona',
+                'how-sub': 'De la importaci\u00f3n de correo al reporte forense en cuatro pasos',
+                'step1-title': 'Crear un proyecto',
+                'step1-desc': 'Organiza tu investigaci\u00f3n creando un proyecto. Cada proyecto mantiene la evidencia, an\u00e1lisis y reportes separados y autocontenidos.',
+                'step2-title': 'Importar evidencia',
+                'step2-desc': 'Arrastra y suelta archivos EML, MSG o MBOX en el m\u00f3dulo de Ingesta. MailMapr analiza encabezados, cuerpo, adjuntos y metadatos autom\u00e1ticamente. Usa Vista R\u00e1pida para inspeccionar archivos sin crear un proyecto.',
+                'step3-title': 'Analizar e investigar',
+                'step3-desc': 'Revisa puntuaciones de riesgo de phishing, resultados SPF/DKIM/DMARC y codificaci\u00f3n de confianza por color. Usa L\u00ednea de tiempo, Grafos de correlaci\u00f3n e Indicadores para mapear el panorama completo del ataque.',
+                'step4-title': 'Generar reportes',
+                'step4-desc': 'Exporta reportes T\u00e9cnico Forense o Resumen Ejecutivo como HTML o PDF. Comparte hallazgos con direcci\u00f3n, equipos legales o respondedores de incidentes.',
+                'link-privacy': 'Pol\u00edtica de privacidad',
+                'link-terms': 'T\u00e9rminos de uso',
+                'link-support': 'Soporte',
+                'link-contact': 'Contacto',
+                'footer-rights': 'Todos los derechos reservados.',
+                'footer-available': 'Disponible en la Mac App Store.',
+                'cap-dashboard': '<strong>Panel del proyecto</strong> Distribuci\u00f3n de riesgo, an\u00e1lisis de confianza, vectores de amenaza, remitentes marcados y seguimiento de IoC de un vistazo.',
+                'cap-global': '<strong>Panel global</strong> An\u00e1lisis entre proyectos con l\u00ednea de tiempo de incidentes, puntuaciones de riesgo y correlaci\u00f3n de contactos entre incidentes.',
+                'cap-corr-email': '<strong>Correlaci\u00f3n &mdash; Red de correo</strong> Grafo de red interactivo que mapea relaciones entre remitentes. Codificado por color seg\u00fan nivel de confianza con m\u00e9tricas de centralidad.',
+                'cap-corr-threads': '<strong>Correlaci\u00f3n &mdash; Hilos</strong> Visualiza hilos de conversaci\u00f3n como grafos interactivos. Los correos relacionados se enlazan autom\u00e1ticamente, revelando cadenas de respuesta, patrones de reenv\u00edo y conexiones entre incidentes.',
+                'cap-timeline': '<strong>An\u00e1lisis de l\u00ednea de tiempo</strong> Visualiza hilos de correo a lo largo del tiempo. Inspecciona mensajes individuales con etiquetas de phishing, vista previa del cuerpo y metadatos completos.',
+                'cap-message': '<strong>Mensaje y encabezados</strong> An\u00e1lisis completo de encabezados con campos parseados, resultados SPF/DKIM/DMARC, direcciones IP y detalles de autenticaci\u00f3n.',
+                'cap-ioc': '<strong>Indicadores de compromiso</strong> Rastrea y etiqueta correos, dominios e IPs maliciosos. Agrega IoCs con nivel de amenaza, notas y evidencia asociada.',
+                'cap-report': '<strong>Reportes profesionales</strong> Genera reportes T\u00e9cnico Forense y Resumen Ejecutivo con l\u00ednea de tiempo de actividad de correo y visualizaciones de red de hilos.',
+                'cap-ingest': '<strong>Ingesta y visor de correo</strong> Importa correos arrastrando y soltando. Visualiza cuerpo del mensaje, encabezados, contenido raw y metadatos con etiquetas de phishing.',
+                'cap-import': '<strong>Importar datos de investigaci\u00f3n</strong> Importa listas de confianza, etiquetas de evidencia, \u00edndice de IoC y marcas desde otro proyecto con opciones de combinar o reemplazar.',
+                'cap-export': '<strong>Exportar datos de investigaci\u00f3n</strong> Exporta listas de confianza, etiquetas de evidencia, \u00edndice de IoC y marcas de mensajes para compartir o archivar.',
+                'cap-launcher': '<strong>Inicio y espacio de trabajo</strong> Vista general del espacio de trabajo con lista de proyectos, l\u00ednea de tiempo de incidentes, Vista R\u00e1pida para inspecci\u00f3n instant\u00e1nea de archivos y creaci\u00f3n de proyectos.'
+            }
+        };
+
+        var enTexts = {};
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (lang === 'es') {
+                    if (!enTexts[key]) enTexts[key] = el.innerHTML;
+                    if (translations.es[key]) el.innerHTML = translations.es[key];
+                } else {
+                    if (enTexts[key]) el.innerHTML = enTexts[key];
+                }
+            });
+            document.getElementById('lang-en').style.color = lang === 'en' ? '#58a6ff' : '#6e7681';
+            document.getElementById('lang-en').style.fontWeight = lang === 'en' ? '700' : '400';
+            document.getElementById('lang-es').style.color = lang === 'es' ? '#58a6ff' : '#6e7681';
+            document.getElementById('lang-es').style.fontWeight = lang === 'es' ? '700' : '400';
+            document.documentElement.lang = lang;
+            localStorage.setItem('mailmapr-lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var saved = localStorage.getItem('mailmapr-lang');
+            if (saved === 'es') setLang('es');
         });
     </script>
 </body>
