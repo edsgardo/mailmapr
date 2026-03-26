@@ -39,11 +39,11 @@
         .nav-links { display: flex; align-items: center; flex-wrap: nowrap; }
         .lang-toggle { white-space: nowrap; }
         @media (max-width: 600px) {
-            .nav { padding: 10px 12px; }
-            .nav-brand { font-size: 14px; }
-            .nav-brand img { width: 18px !important; height: 18px !important; }
-            .nav-links a { margin-left: 8px; font-size: 10px; }
-            .lang-toggle { margin-left: 8px !important; font-size: 10px; }
+            .nav { padding: 8px 10px; }
+            .nav-brand { font-size: 13px; }
+            .nav-brand img { width: 16px !important; height: 16px !important; margin-right: 4px !important; }
+            .nav-links a { margin-left: 6px; font-size: 9px; }
+            .lang-toggle { margin-left: 6px !important; font-size: 9px; }
         }
         h1 {
             font-size: 32px;
@@ -162,6 +162,7 @@
     <div class="nav">
         <a href="index.html" class="nav-brand"><img src="screenshots/MailMapr-cropped.png" alt="" style="width: 22px; height: 22px; border-radius: 5px; vertical-align: middle; margin-right: 6px;">MailMapr</a>
         <div class="nav-links">
+            <a href="index.html" data-i18n="nav-home">Home</a>
             <a href="index.html#features" data-i18n="nav-features">Features</a>
             <a href="support.html" data-i18n="nav-support">Support</a>
             <a href="privacy.html" data-i18n="nav-privacy">Privacy</a>
@@ -280,9 +281,11 @@
     <script>
         var translations = {
             es: {
+                'nav-home': 'Inicio',
                 'nav-features': 'Funciones',
+                'nav-support': 'Soporte',
                 'nav-privacy': 'Privacidad',
-                'nav-terms': 'Condiciones',
+                'nav-terms': 'T\u00e9rminos',
                 'title': 'Soporte',
                 'subtitle': 'Obtener ayuda con MailMapr',
                 'contact-label': '\u00bfNecesitas ayuda? Escr\u00edbenos a',
