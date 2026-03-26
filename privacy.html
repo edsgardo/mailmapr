@@ -32,6 +32,13 @@
             transition: color 0.2s;
         }
         .nav-links a:hover { color: #e6edf3; }
+        .nav-links { display: flex; align-items: center; flex-wrap: nowrap; }
+        .lang-toggle { white-space: nowrap; }
+        @media (max-width: 600px) {
+            .nav { padding: 12px 16px; }
+            .nav-links a { margin-left: 10px; font-size: 11px; }
+            .lang-toggle { margin-left: 10px !important; }
+        }
         h1 {
             font-size: 32px;
             margin-bottom: 8px;
@@ -69,7 +76,7 @@
 </head>
 <body>
     <div class="nav">
-        <a href="index.html" class="nav-brand">MailMapr</a>
+        <a href="index.html" class="nav-brand"><img src="screenshots/MailMapr.png" alt="" style="width: 22px; height: 22px; border-radius: 5px; vertical-align: middle; margin-right: 6px;">MailMapr</a>
         <div class="nav-links">
             <a href="index.html" data-i18n="nav-home">Home</a>
             <a href="support.html" data-i18n="nav-support">Support</a>
