@@ -296,6 +296,35 @@
         }
         .gallery-item .caption strong { color: #e6edf3; font-size: 13px; display: block; margin-bottom: 2px; }
 
+        /* Video Previews */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 1100px;
+            margin: 24px auto;
+            padding: 0 24px;
+        }
+        .video-item {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .video-item:hover { transform: translateY(-3px); border-color: #58a6ff; }
+        .video-item video {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #30363d;
+        }
+        .video-item .caption {
+            padding: 10px 12px;
+            font-size: 12px;
+            color: #8b949e;
+        }
+        .video-item .caption strong { color: #e6edf3; font-size: 13px; display: block; margin-bottom: 2px; }
+
         /* Lightbox */
         .lightbox {
             display: none;
@@ -361,6 +390,7 @@
             .lang-toggle { margin-left: 6px !important; font-size: 9px; }
             .features, .personas, .steps-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr; }
+            .video-grid { grid-template-columns: 1fr; }
             .feature-full > div[style] { grid-template-columns: 1fr !important; }
             .highlight-row { grid-template-columns: 1fr 1fr; }
             .hero h1 { font-size: 34px; }
@@ -523,6 +553,42 @@
             <div class="stat">
                 <div class="num">0</div>
                 <div class="label" data-i18n="stat4">Data sent to cloud</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Previews -->
+    <div class="section-title" style="padding-top: 60px;">
+        <h2 data-i18n="video-title">App Preview</h2>
+        <p data-i18n="video-sub">Watch MailMapr in action</p>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <video controls playsinline preload="metadata" poster="screenshots/preview-1-poster.jpg">
+                <source src="screenshots/MailMapr-Preview-1-cyber-v2.mp4" type="video/mp4">
+            </video>
+            <div class="caption" data-i18n="vid-1">
+                <strong>Dashboard & Analysis</strong>
+                Project dashboard, risk distribution, trust analysis, and threat vector overview.
+            </div>
+        </div>
+        <div class="video-item">
+            <video controls playsinline preload="metadata" poster="screenshots/preview-2-poster.jpg">
+                <source src="screenshots/MailMapr-Preview-2-cyber-v2.mp4" type="video/mp4">
+            </video>
+            <div class="caption" data-i18n="vid-2">
+                <strong>Correlation & Timeline</strong>
+                Email network graphs, thread correlation, and timeline analysis.
+            </div>
+        </div>
+        <div class="video-item">
+            <video controls playsinline preload="metadata" poster="screenshots/preview-3-poster.jpg">
+                <source src="screenshots/MailMapr-Preview-3-cyber-v2.mp4" type="video/mp4">
+            </video>
+            <div class="caption" data-i18n="vid-3">
+                <strong>Reports & Investigation</strong>
+                Forensic reports, IoC tracking, and email investigation workflow.
             </div>
         </div>
     </div>
@@ -739,6 +805,11 @@
                 'stat2': 'Tipos de reporte',
                 'stat3': 'Idiomas',
                 'stat4': 'Datos enviados a la nube',
+                'video-title': 'Vista previa de la app',
+                'video-sub': 'Mira MailMapr en acci\u00f3n',
+                'vid-1': '<strong>Dashboard y an\u00e1lisis</strong> Panel del proyecto, distribuci\u00f3n de riesgo, an\u00e1lisis de confianza y resumen de vectores de amenaza.',
+                'vid-2': '<strong>Correlaci\u00f3n y l\u00ednea de tiempo</strong> Grafos de red de correo, correlaci\u00f3n de hilos y an\u00e1lisis de l\u00ednea de tiempo.',
+                'vid-3': '<strong>Reportes e investigaci\u00f3n</strong> Reportes forenses, seguimiento de IoC y flujo de investigaci\u00f3n de correo.',
                 'screenshots-title': 'Mira c\u00f3mo funciona',
                 'screenshots-sub': 'Haz clic en cualquier captura para ampliar',
                 'screenshots-disclaimer': 'Todas las direcciones de correo, nombres de empresas y dominios mostrados en las capturas son completamente ficticios y fueron creados con fines de demostraci\u00f3n usando el TLD .test reservado por IANA.',
